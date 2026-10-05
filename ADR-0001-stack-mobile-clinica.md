@@ -47,3 +47,9 @@ A PWA permite reutilizar conhecimentos de desenvolvimento web, manter uma única
 - [MDN — Progressive Web Apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
 - [Charland e LeRoux — Mobile application development: web vs. native](https://dblp.org/rec/journals/cacm/CharlandL11.html).
 - [Michael Nygard — Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions).
+
+## Complemento do MVP web (2026-10-05)
+
+Para validar a experiência da PWA sem depender de um backend, o primeiro incremento usa React + Vite + TypeScript. O catálogo, profissionais, serviços e horários são dados locais de demonstração tipados. Zustand foi escolhido para manter favoritos e agendamentos em estado previsível, com persistência em `localStorage` por meio do middleware `persist`.
+
+O MVP não implementa autenticação, disponibilidade em tempo real, sincronização entre dispositivos, pagamentos ou notificações. Agendamentos locais representam uma reserva de demonstração neste dispositivo e deverão ser substituídos por uma API quando o produto receber backend. A interação de favorito usa animação CSS baseada em `transform`, com respeito a `prefers-reduced-motion`, evitando dependência de Reanimated no contexto web.
